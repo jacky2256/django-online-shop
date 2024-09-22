@@ -41,6 +41,7 @@ INSTALLED_APPS = [
     'shop.apps.ShopConfig',
     'cart.apps.CartConfig',
     'orders.apps.OrdersConfig',
+    'payment.apps.PaymentConfig',
 ]
 
 MIDDLEWARE = [
@@ -133,5 +134,9 @@ MEDIA_ROOT = BASE_DIR / 'media'
 DEFAULT_AUTO_FIELD = 'django.db.models.BigAutoField'
 
 CART_SESSION_ID = 'cart'
+
+STRIPE_PUBLISHABLE_KEY = 'pk_test_51Q1rFDRwfymB918FhSaZDkshjECRPt9KwUaAyov1lyq0v9fJrS6rylKRojx97PRqMfMrgQSmkL5FtlQTnQCSQCku00NmDUKQVv'
+STRIPE_SECRET_KEY = 'sk_test_51Q1rFDRwfymB918FQ2ELVxgMlZmCHsGDRGkP2hELQB7fci7v846plMFeoPMzppDeQ07ortmhEtPCqA96QnKlDNOl00Qw2jk37I'
+STRIPE_API_VERSION = '2024-06-20'
 
 EMAIL_BACKEND = 'django.core.mail.backends.console.EmailBackend'
