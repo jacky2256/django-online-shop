@@ -9,7 +9,7 @@ https://docs.djangoproject.com/en/5.1/topics/settings/
 For the full list of settings and their values, see
 https://docs.djangoproject.com/en/5.1/ref/settings/
 """
-
+import os
 from pathlib import Path
 
 # Build paths inside the project like this: BASE_DIR / 'subdir'.
@@ -122,8 +122,8 @@ USE_TZ = True
 # https://docs.djangoproject.com/en/5.1/howto/static-files/
 
 STATIC_URL = 'static/'
-# STATIC_ROOT = BASE_DIR / 'static'
-STATICFILES_DIRS = [BASE_DIR / 'static']
+STATIC_ROOT = BASE_DIR / 'static'
+# STATICFILES_DIRS = [BASE_DIR / 'static']
 
 MEDIA_URL = '/media/'
 MEDIA_ROOT = BASE_DIR / 'media'
@@ -138,5 +138,6 @@ CART_SESSION_ID = 'cart'
 STRIPE_PUBLISHABLE_KEY = 'pk_test_51Q1rFDRwfymB918FhSaZDkshjECRPt9KwUaAyov1lyq0v9fJrS6rylKRojx97PRqMfMrgQSmkL5FtlQTnQCSQCku00NmDUKQVv'
 STRIPE_SECRET_KEY = 'sk_test_51Q1rFDRwfymB918FQ2ELVxgMlZmCHsGDRGkP2hELQB7fci7v846plMFeoPMzppDeQ07ortmhEtPCqA96QnKlDNOl00Qw2jk37I'
 STRIPE_API_VERSION = '2024-06-20'
+STRIPE_WEBHOOK_SECRET = ''
 
 EMAIL_BACKEND = 'django.core.mail.backends.console.EmailBackend'
