@@ -142,3 +142,7 @@ STRIPE_API_VERSION = '2024-06-20'
 STRIPE_WEBHOOK_SECRET = ''
 
 EMAIL_BACKEND = 'django.core.mail.backends.console.EmailBackend'
+
+REDIS_HOST = 'localhost'
+REDIS_PORT = 6379
+REDIS_DB = 1
